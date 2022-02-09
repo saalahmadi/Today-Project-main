@@ -150,29 +150,15 @@ prev.addEventListener("click",()=>{
         fetch(searchApi)
         .then(response => response.json())
         .then(data => {
+      let temp =data.data[0].app_temp;
+      let cityName=data.data[0].city_name;
+      let status=data.data[0].weather.description;
+      let icon=data.data[0].weather.icon;
       
-      console.log(data.data)
+         
       
-      
+          document.getElementById("weather").innerHTML = `${temp} <br> ${status} <br> ${cityName} <img src="https://www.weatherbit.io/static/img/icons/${icon}.png"/>`
           
-      
-      fetch(weatherApi)
-      .then(response => response.json())
-      .then(data => {
-    let temp =data.data[0].app_temp;
-    let cityName=data.data[0].city_name;
-    let status=data.data[0].weather.description;
-    let icon=data.data[0].weather.icon;
-    
-       
-    
-        document.getElementById("weather").innerHTML = `${temp} <br> ${status} <br> ${cityName} <img src="https://www.weatherbit.io/static/img/icons/${icon}.png"/>`
-        
-    
-    
-    
-    
-      });
       
       
       
