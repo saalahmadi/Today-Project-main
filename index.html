@@ -19,34 +19,34 @@
     <div class="container-fluid">
       <a class="navbar-brand text-white fs-1">News</a>
       <form class="d-flex ms-auto">
-        <div id="search" class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search for..." aria-label="Recipient's username" aria-describedby="button-addon2" >
-           <!-- --> <button class="btn btn-outline-secondary bg-pink" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+        <div  class="input-group mb-3">
+            <input id="search" type="text" class="form-control" placeholder="Search for..." aria-label="Recipient's username" aria-describedby="button-addon2" >
+          <button id="searchButton" class="btn btn-outline-secondary bg-pink" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
           </div>
     </form>
     </div>
   </nav>
-  <ul id="headings" class="nav  bg-dark">
+  <ul id="headings" class="nav  bg-dark d-flex justify-content-between">
     <li class="nav-item ">
-      <a id="business" class="p-2 nav-link text-white text-uppercase" href="index.html">business</a>
+      <a id="business" class="p-2 nav-link text-white text-uppercase" >business</a>
     </li>
     <li class="nav-item">
-      <a  id="entertainment" class="p-2 nav-link text-white text-uppercase" href="entertainment.html">entertainment</a>
+      <a  id="entertainment" class="p-2 nav-link text-white text-uppercase" >entertainment</a>
     </li>
     <li class="nav-item">
-      <a id="general" class="p-2 nav-link text-white text-uppercase" href="general.html">general</a>
+      <a id="general" class="p-2 nav-link text-white text-uppercase" >general</a>
     </li>
     <li class="nav-item">
-      <a id="health" class="p-2 nav-link text-white text-uppercase" href="health.html">health</a>
+      <a id="health" class="p-2 nav-link text-white text-uppercase" >health</a>
     </li>
     <li class="nav-item">
-      <a  id="science" class="p-2 nav-link text-white text-uppercase" href="science.html">science</a>
+      <a  id="science" class="p-2 nav-link text-white text-uppercase" >science</a>
     </li>
     <li class="nav-item">
-      <a id="sports" class="p-2 nav-link text-white text-uppercase" href="sports.html">sports</a>
+      <a id="sports" class="p-2 nav-link text-white text-uppercase" >sports</a>
     </li>
     <li class="nav-item">
-      <a id="technology" class="p-2 nav-link text-white text-uppercase" href="technology.html">technology</a>
+      <a id="technology" class="p-2 nav-link text-white text-uppercase" >technology</a>
     </li>
 
     <button class="btn btn-dark text-uppercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Weather</button>
@@ -57,8 +57,15 @@
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
       <h5 id="offcanvasRightLabel">The Weather Today</h5>
+      
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
+    <form class="d-flex ms-auto">
+      <div  class="input-group mb-3">
+          <input id="s" type="text" class="form-control" placeholder="Search for..." aria-label="Recipient's username" aria-describedby="button-addon2" >
+        <button id="sb" class="btn btn-outline-secondary bg-pink" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+        </div>
+  </form>
     <div id="weather" class="offcanvas-body">
      
     </div>
@@ -69,6 +76,14 @@
 
 </div>
 
+  </div>
+  <div class="text-center my-5 ">
+    <button id="prev"type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover" disabled>
+      <i class="fas fa-angle-left"></i>
+    </button>
+    <button id="next"type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+      <i class="fas fa-angle-right"></i>
+    </button>
   </div>
 
   <footer class="py-3 my-4 bg-footer">
